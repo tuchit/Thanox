@@ -1,11 +1,11 @@
 ---
 layout: default
-title:  "其他文章参考"
-summary: "其他文章参考"
+title:  "Other article references"
+summary: "Other article references"
 nav_order: 8
 ---
 
-# 其他文章参考
+# Other article references
 
 
 
