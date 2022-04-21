@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 安装与激活
+title: Install & Activate
 nav_order: 3
 ---
 
 
 
-## 安装
+## Install
 
 1. Thanox是一个独立的apk，只需要下载apk安装到设备上即可。
 2. 目前仅支持**Android 6.0及其以上**版本的ROM。
@@ -14,18 +14,18 @@ nav_order: 3
 
 &nbsp;
 
-## 激活
+## Activate
 
 Thanox中大部分的功能都是在系统进程中完成的，因此Thanox会对Android系统打补丁。
 
 目前支持两种模式激活（二选一）：
 
-* Xposed模式， Android6+
-* Magisk模式，Android11+，实验性，目前功能相对较少
+* Xposed mode， Android6+
+* Magisk mode，Android11+，实验性，目前功能相对较少
 
 &nbsp;
 
-### Xposed模式
+### Xposed mode
 
 1. 你的设备必须已经正确安装了**Xposed框架**（或者其他类似支持Xposed API的框架）
 2. 安装Thanox apk后，进入**Xposed installer**应用，勾选Thanox
@@ -36,7 +36,7 @@ Thanox中大部分的功能都是在系统进程中完成的，因此Thanox会�
 
 &nbsp;
 
-### Magisk模式(实验)
+### Magisk mode(experimental)
 
 1. 你的设备必须已经正确安装了**Magisk框架**
 2. 你的设备必须已经正确安装了**riru**框架
