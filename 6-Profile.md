@@ -76,16 +76,16 @@ You can build a simple rules engine yourself. All you need is to create a bunch 
 
 &nbsp;
 
-### 0.4.1. 应用安装
+### 0.4.1. Install app
 
 应用安装成功之后，thanox会发布这个事实，并注入一些参数，你可以使用这些参数做条件判断，或者执行动作时作为参数使用。
 
-| 参数名   | 类型                  | 含义           | 示例 |
+| 参数名   | 类型                  | 含义           | Example |
 | -------- | --------------------- | -------------- | ---- |
 | pkgAdded | Boolean（true/false） | 新应用已经安装 | 如下 |
 | pkgName  | String（字符串）      | 安装的应用包名 | 如下 |
 
-**pkgAdded** 示例
+**pkgAdded** Example
 
 - 作为条件判断：
 
@@ -93,7 +93,7 @@ You can build a simple rules engine yourself. All you need is to create a bunch 
   "condition":  "pkgAdded == true"
   ```
 
-**pkgName**示例
+**pkgName** Example
 
 * 作为条件判断：
 
@@ -113,7 +113,7 @@ You can build a simple rules engine yourself. All you need is to create a bunch 
 
 前台应用切换时，thanox也会发布这个事实，参数如下。
 
-| 参数名          | 类型                  | 含义                   | 示例 |
+| 参数名          | 类型                  | 含义                   | Example |
 | --------------- | --------------------- | ---------------------- | ---- |
 | frontPkgChanged | Boolean（true/false） | 前台应用已切换         | 如下 |
 | from            | String（字符串）      | 从哪个应用切换的，包名 | 如下 |
@@ -127,7 +127,7 @@ You can build a simple rules engine yourself. All you need is to create a bunch 
   "condition":  "frontPkgChanged == true"
   ```
 
-**from**示例
+**from** Example
 
 * 作为条件判断，微信是否回到了后台：
 
@@ -141,12 +141,12 @@ You can build a simple rules engine yourself. All you need is to create a bunch 
 
 当某个应用的任务被移除时，一般场景为最近任务中，该任务被用户划掉。此时thanox也会发布这个事实，参数如下。
 
-| 参数名      | 类型                  | 含义                   | 示例 |
+| 参数名      | 类型                  | 含义                   | Example |
 | ----------- | --------------------- | ---------------------- | ---- |
 | taskRemoved | Boolean（true/false） | 任务已移除             | 如下 |
 | pkgName     | String（字符串）      | 从哪个应用切换的，包名 | 如下 |
 
-**taskRemoved**示例
+**taskRemoved** Example
 
 * 作为条件判断：
 
@@ -154,7 +154,7 @@ You can build a simple rules engine yourself. All you need is to create a bunch 
   "condition":  "taskRemoved == true"
   ```
 
-**pkgName**示例：
+**pkgName** Example：
 
 * 作为条件判断，微信任务移除时杀死应用：
 
@@ -179,7 +179,7 @@ Resumed--> Paused（被其他活动覆盖）-->Resumed（如果其他活动销�
 
 详细的Android活动的生命周期可以参考：https://developer.android.com/guide/components/activities/activity-lifecycle
 
-| 参数名                     | 类型                  | 含义                                                     | 示例 |
+| 参数名                     | Type                  | 含义                                                     | 示例 |
 | -------------------------- | --------------------- | -------------------------------------------------------- | ---- |
 | activityCreated        | Boolean（true/false） | 活动页已经创建好                                               | 如下 |
 | componentNameAsString      | String（字符串）      | 活动的组件全名，Thanox的显示当前活动复制来的名字就是这个 | 如下 |
@@ -193,7 +193,7 @@ Resumed--> Paused（被其他活动覆盖）-->Resumed（如果其他活动销�
 
 通常一个应用的活动页已经显示，可以称为**Activity Resumed**。此时thanox也会发布这个事实，参数如下。
 
-| 参数名                     | 类型                  | 含义                                                     | 示例 |
+| 参数名                     | Type                  | 含义                                                     | 示例 |
 | -------------------------- | --------------------- | -------------------------------------------------------- | ---- |
 | activityResumed            | Boolean（true/false） | 活动已经显示                                               | 如下 |
 | componentNameAsString      | String（字符串）      | 活动的组件全名，Thanox的显示当前活动复制来的名字就是这个 | 如下 |
@@ -226,7 +226,7 @@ Resumed--> Paused（被其他活动覆盖）-->Resumed（如果其他活动销�
 
 当前前台活动(Activity)发生改变时thanox会发布该事件。(Since Thanox(or Pro)-2.5)
 
-| 参数名    | 类型                  | 含义       | 示例 |
+| 参数名    | Type                  | 含义       | Example |
 | --------- | --------------------- | ---------- | ---- |
 | frontActivityChanged | Boolean（true/false） | 前台Activity改变 | 无 |
 | fromActivity   | ComponentName      | 活动的组件   | 无 |
@@ -251,7 +251,7 @@ Thanox的开发者设置中，"显示当前Activity"功能也可以显示当前a
 
 &nbsp;
 
-### 0.4.8. 屏幕开关
+### 0.4.8. Screen on/off
 
 | 参数名    | 类型                  | 含义       | 示例 |
 | --------- | --------------------- | ---------- | ---- |
@@ -273,7 +273,7 @@ Thanox的开发者设置中，"显示当前Activity"功能也可以显示当前a
 
 &nbsp;
 
-### 0.4.10. 蓝牙事件
+### 0.4.10. Bluetooth events
 
 | 参数名    | 类型                  | 含义       | 示例 |
 | --------- | --------------------- | ---------- | ---- |
@@ -294,10 +294,10 @@ Thanox的开发者设置中，"显示当前Activity"功能也可以显示当前a
 | btBoundedDeviceAliasNames   | List of String      | 绑定的蓝牙设备Alias列表   | 无 |
 | btBoundedDeviceBatteryLevel   | List of Int      | 绑定的蓝牙设备电量信息列表   | 无 |
 
-提示：
+Tip：
 Battery level in percents from 0 to 100, or -1 if Bluetooth is disabled, or device is disconnected, or does not have any battery reportingservice, or return value is invalid
 
-示例1：
+Example 1：
 
 ```json
 [
@@ -314,7 +314,7 @@ Battery level in percents from 0 to 100, or -1 if Bluetooth is disabled, or devi
 ]
 ```
 
-示例2：
+Example 2：
 
 ```json
 [
@@ -357,7 +357,7 @@ data class WifiState(
 
 ### 0.4.12. 系统启动
 
-| 参数名    | 类型                  | 含义       | 示例 |
+| 参数名    | Type                  | 含义       | Example |
 | --------- | --------------------- | ---------- | ---- |
 | systemReady | Boolean（true/false） | 系统启动完成 | 无 |
 
