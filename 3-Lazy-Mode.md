@@ -1,16 +1,16 @@
 ---
 layout: default
-title:  "乖巧模式"
-summary: "实验功能"
+title:  "Smart Mode"
+summary: "Experimental"
 date:   2018-07-13 15:58:00
 nav_order: 4
 ---
 <!-- more -->
 
-## 功能介绍
-有些应用在启动或者运行时，会启动一些后台服务，当应用回到后台时，这些后台服务很有可能继续在后台运行，可能会造成一些资源和电池的消耗。
+## Features
+When some apps start or are active, they will also start some background services. These background services are likely to continue to run in the background even if you close the apps, which may cause some resource and battery consumption.
 
-**乖巧模式**的机制是**检测到应用回到后台**时，主动停止这些服务。
+**Smart mode** is designed to actively stop these services when it **detects that the app is running in the background**.
 
-`提示：这个模式适合于一些不常用的，不依赖于后台服务的应用，有可能会导致app无法按照预期工作，因此尽量不要用于依赖性很强的社交类应用。`
+`Tip: This mode is suitable for some apps that are not commonly used and do not rely on background services, which may cause the app to fail to work as expected. So try not to use it for social apps that highly rely on background services. `
 
